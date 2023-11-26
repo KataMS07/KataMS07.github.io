@@ -223,8 +223,9 @@ header .fa-bars{
 
 .icons-container{
     background:#eee;
-    padding: 2rem 0;
+    /*padding: 2rem 0;*/
 }
+
 
 .icons-container .box-container{
     display: flex;
@@ -498,7 +499,7 @@ label[for="filtroTipo"], #filtroTipo {
     padding: 0 20px;
 }
 
-.contenido form .boton{
+.boton{
     width: 100%;
     height: 70px;
     color:  rgb(106, 24, 139);
