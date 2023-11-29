@@ -158,15 +158,6 @@
 
 
 <script>
-    // Calcular la edad al seleccionar la fecha de nacimiento
-    document.getElementById('fechaNacimiento').addEventListener('change', function() {
-        const fechaNacimiento = new Date(this.value);
-        const hoy = new Date();
-        const edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
-        document.getElementById('edad').value = edad;
-    });
-
-
     //Para utilizar el valor del output según el rango de ingreso
     const rangoIngreso = document.getElementById('rangoIngreso');
     const rangoOutput = document.getElementById('rangoOutput');
