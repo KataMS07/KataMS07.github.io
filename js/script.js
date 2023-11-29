@@ -20,6 +20,30 @@ window.onscroll = () =>{
 
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('miFormulario');
+
+    form.addEventListener('submit', function(event) {
+        // Validación del nombre
+        var nombreInput = document.getElementById('nombre');
+        if (!/^[a-zA-Z]+$/.test(nombreInput.value)) {
+            alert('El nombre solo puede contener letras.');
+            event.preventDefault();
+            return false;
+        }
+
+        // Validación del correo electrónico
+        var correoInput = document.getElementById('correo');
+        if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(correoInput.value)) {
+            alert('Por favor, ingrese un correo electrónico válido.');
+            event.preventDefault();
+            return false;
+        }
+        // Si todas las validaciones son exitosas, el formulario se enviará normalmente
+        return true;
+    });
+});
+
 let themeToggler = document.querySelector('#theme-toggler');
 
 themeToggler.onclick = () =>{
